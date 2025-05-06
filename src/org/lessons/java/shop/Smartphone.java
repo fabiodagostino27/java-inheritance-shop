@@ -32,6 +32,6 @@ public class Smartphone extends Prodotto {
 
     @Override
     public String toString() {
-        return String.format("Smartphone: '%s', con codice: '%d' e imei: '%d'", this.getNome(), this.getCodice(), this.imei);
+        return String.format("Smartphone: '%s', con codice: %d e imei: %d", this.getNome(), this.getCodice(), this.imei);
     }
 }
