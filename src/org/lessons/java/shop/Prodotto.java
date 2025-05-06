@@ -18,4 +18,36 @@ public class Prodotto {
         this.prezzo = prezzo;
         this.iva = iva;
     }
+
+    public int getCodice() {
+        return this.codice;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public BigDecimal getPrezzo() {
+        return this.prezzo;
+    }
+
+    public void setPrezzo(BigDecimal prezzo) {
+        this.prezzo = prezzo;
+    }
+
+    public BigDecimal getIva() {
+        return this.iva;
+    }
+
+    public void setIva(BigDecimal iva) {
+        this.iva = iva;
+    }
+
+    public String toString() {
+        return String.format("Il nome del prodotto è '%s'", nome);
+    }
 }
