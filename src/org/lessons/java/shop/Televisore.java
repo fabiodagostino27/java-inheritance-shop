@@ -2,11 +2,11 @@ package org.lessons.java.shop;
 
 import java.math.BigDecimal;
 
-public class Televisori extends Prodotto {
+public class Televisore extends Prodotto {
     private int dimensionInPollici;
     private boolean isSmart;
 
-    public Televisori(String nome, String marca, BigDecimal prezzo, BigDecimal iva, int dimensionInPollici, boolean isSmart) {
+    public Televisore(String nome, String marca, BigDecimal prezzo, BigDecimal iva, int dimensionInPollici, boolean isSmart) {
         super(nome, marca, prezzo, iva);
         this.dimensionInPollici = dimensionInPollici;
         this.isSmart = isSmart;
