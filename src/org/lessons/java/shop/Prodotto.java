@@ -31,6 +31,14 @@ public class Prodotto {
         this.nome = nome;
     }
 
+    public String getMarca() {
+        return this.marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
     public BigDecimal getPrezzo() {
         return this.prezzo;
     }
@@ -48,6 +56,6 @@ public class Prodotto {
     }
 
     public String toString() {
-        return String.format("Il nome del prodotto è '%s'", nome);
+        return String.format("Il nome del prodotto è '%s', con codice: '%d'", this.nome, this.codice);
     }
 }
