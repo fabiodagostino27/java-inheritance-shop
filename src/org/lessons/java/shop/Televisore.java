@@ -30,6 +30,6 @@ public class Televisore extends Prodotto {
 
     @Override
     public String toString() {
-        return String.format("Televisore: '%s', con codice: %d, di pollici: %d, smart: %b", this.getNome(), this.getCodice(), this.dimensionInPollici, this.isSmart);
+        return String.format("Televisore: '%s', con codice: %d, di pollici: %d, smart: %b, prezzo comprensivo di iva: %s", this.getNome(), this.getCodice(), this.dimensionInPollici, this.isSmart, this.getPrezzoConIva());
     }
 }
