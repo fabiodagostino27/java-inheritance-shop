@@ -7,8 +7,8 @@ public class Smartphone extends Prodotto {
     private long imei;
     private int memoria;
 
-    public Smartphone(String nome, String marca, BigDecimal prezzo, BigDecimal iva, int memoria) {
-        super(nome, marca, prezzo, iva);
+    public Smartphone(String nome, String marca, BigDecimal prezzo, int memoria) {
+        super(nome, marca, prezzo);
         Random rand = new Random();
         this.imei = rand.nextLong(999999999999999l);
         this.memoria = memoria;

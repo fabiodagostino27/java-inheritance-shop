@@ -6,8 +6,8 @@ public class Televisore extends Prodotto {
     private int dimensionInPollici;
     private boolean isSmart;
 
-    public Televisore(String nome, String marca, BigDecimal prezzo, BigDecimal iva, int dimensionInPollici, boolean isSmart) {
-        super(nome, marca, prezzo, iva);
+    public Televisore(String nome, String marca, BigDecimal prezzo, int dimensionInPollici, boolean isSmart) {
+        super(nome, marca, prezzo);
         this.dimensionInPollici = dimensionInPollici;
         this.isSmart = isSmart;
     }
