@@ -7,6 +7,14 @@ public class Carrello {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.print("Hai una tessera fedeltà? Rispondi con 'y' per sì e 'n' per no: ");
+        String inputFedeltà = sc.nextLine();
+        boolean fedeltà = false;
+        
+        if (inputFedeltà.equals("y")) {
+            fedeltà = true;
+        }
+
         System.out.print("Quanti prodotti vuoi mettere nel carrello? ");
         int numeroProdotti = sc.nextInt();
         Prodotto[] arrayProdotti = new Prodotto[numeroProdotti];
@@ -41,7 +49,8 @@ public class Carrello {
                     isSmart = false;
                 }
 
-                Televisore tv = new Televisore(nome, marca, prezzo, dimensionInPollici, isSmart);
+                Televisore tv = new Televisore(nome, marca, prezzo, fedeltà, dimensionInPollici, isSmart);
+
                 arrayProdotti[i] = tv;
             } else if (tipoProdotto.equals("cuffia")) {
                 System.out.print("Di che colore sono le cuffie? ");
@@ -59,7 +68,7 @@ public class Carrello {
                     isWireless = false;
                 }
 
-                Cuffia cuffie = new Cuffia(nome, marca, prezzo, colore, isWireless);
+                Cuffia cuffie = new Cuffia(nome, marca, prezzo, colore, fedeltà, isWireless);
                 arrayProdotti[i] = cuffie;
             } else if (tipoProdotto.equals("smartphone")) {
                 System.out.print("Di qunati gb è la memoria dello smartphone? ");
@@ -67,7 +76,7 @@ public class Carrello {
 
                 sc.nextLine();
 
-                Smartphone smartphone = new Smartphone(nome, marca, prezzo, memoria);
+                Smartphone smartphone = new Smartphone(nome, marca, prezzo, fedeltà, memoria);
                 arrayProdotti[i] = smartphone;
             }
 

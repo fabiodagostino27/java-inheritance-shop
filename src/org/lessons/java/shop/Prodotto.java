@@ -10,14 +10,16 @@ public class Prodotto {
     private String marca;
     private BigDecimal prezzo;
     private BigDecimal iva;
+    private boolean fedeltà;
 
-    public Prodotto(String nome, String marca, BigDecimal prezzo) {
+    public Prodotto(String nome, String marca, BigDecimal prezzo, boolean fedeltà) {
         Random rand = new Random();
         this.codice = rand.nextInt(999);
         this.nome = nome;
         this.marca = marca;
         this.prezzo = prezzo;
         this.iva = new BigDecimal("0.22");
+        this.fedeltà = fedeltà;
     }
 
     public int getCodice() {
@@ -39,17 +41,31 @@ public class Prodotto {
     public void setMarca(String marca) {
         this.marca = marca;
     }
-
+    
     public BigDecimal getPrezzo() {
         return this.prezzo;
     }
-
+    
     public void setPrezzo(BigDecimal prezzo) {
         this.prezzo = prezzo;
     }
 
+    public boolean getFedeltà() {
+        return this.fedeltà;
+    }
+    
+    public void setFedeltà(boolean fedeltà) {
+        this.fedeltà = fedeltà;
+    }
+
     public BigDecimal getPrezzoConIva() {
-        return this.prezzo.multiply(iva).add(this.prezzo).setScale(2, RoundingMode.HALF_EVEN);
+        BigDecimal prezzoConIva = this.prezzo.multiply(iva).add(this.prezzo).setScale(2, RoundingMode.HALF_EVEN);
+
+        if (fedeltà == true) {
+            return prezzoConIva.subtract(prezzoConIva.multiply(new BigDecimal("0.02"))).setScale(2, RoundingMode.HALF_EVEN);
+        }
+
+        return prezzoConIva;
     }
 
     public BigDecimal getIva() {
