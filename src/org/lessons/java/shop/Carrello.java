@@ -24,6 +24,23 @@ public class Carrello {
 
             System.out.print("Qual è il prezzo del prodotto? ");
             BigDecimal prezzo = sc.nextBigDecimal();
+
+            if (tipoProdotto.equals("tv")) {
+                System.out.print("Di quanti pollici è il televisore?");
+                int dimensionInPollici = sc.nextInt();
+
+                System.out.print("È un televisore smart? Rispondi con 'y' per sì e 'n' per no: ");
+                String inputIsSmart = sc.nextLine();
+                boolean isSmart;
+
+                if (inputIsSmart.equals("y")) {
+                    isSmart = true;
+                } else {
+                    isSmart = false;
+                }
+
+                Televisore tv = new Televisore(nome, marca, prezzo, dimensionInPollici, isSmart);
+            }
         }
 
         sc.close();
