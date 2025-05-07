@@ -4,12 +4,12 @@ import java.math.BigDecimal;
 
 public class Main {
     public static void main(String[] args) {
-        Smartphone iPhone16 = new Smartphone("Iphone 16", "Apple", new BigDecimal("999.99"), 128);
-        Televisore LGSmart = new Televisore("LG SmartTv", "LG", new BigDecimal("599.99"), 43, true);
-        Cuffia airPods = new Cuffia("AirPods", "Apple",  new BigDecimal("100"), "bianco", true);
+        //Smartphone iPhone16 = new Smartphone("Iphone 16", "Apple", new BigDecimal("999.99"), 128);
+        //Televisore LGSmart = new Televisore("LG SmartTv", "LG", new BigDecimal("599.99"), 43, true);
+        //Cuffia airPods = new Cuffia("AirPods", "Apple",  new BigDecimal("100"), "bianco", true);
 
-        System.out.println(iPhone16);
-        System.out.println(LGSmart);
-        System.out.println(airPods);
+        //System.out.println(iPhone16);
+        //System.out.println(LGSmart);
+        //System.out.println(airPods);
     }
 }

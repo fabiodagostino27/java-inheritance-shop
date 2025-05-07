@@ -68,7 +68,7 @@ public class Carrello {
                     isWireless = false;
                 }
 
-                Cuffia cuffie = new Cuffia(nome, marca, prezzo, colore, fedeltà, isWireless);
+                Cuffia cuffie = new Cuffia(nome, marca, prezzo, fedeltà, colore, isWireless);
                 arrayProdotti[i] = cuffie;
             } else if (tipoProdotto.equals("smartphone")) {
                 System.out.print("Di qunati gb è la memoria dello smartphone? ");
